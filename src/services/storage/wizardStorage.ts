@@ -20,8 +20,15 @@ const isWizardState = (value: unknown): value is WizardState => {
   }
   if (
     !isRecord(personalInfo) ||
-    typeof personalInfo.firstName !== 'string' ||
-    typeof personalInfo.lastName !== 'string' ||
+    typeof personalInfo.name !== 'string' ||
+    typeof personalInfo.nationalId !== 'string' ||
+    typeof personalInfo.dateOfBirth !== 'string' ||
+    typeof personalInfo.gender !== 'string' ||
+    typeof personalInfo.address !== 'string' ||
+    typeof personalInfo.city !== 'string' ||
+    typeof personalInfo.state !== 'string' ||
+    typeof personalInfo.country !== 'string' ||
+    typeof personalInfo.countryCode !== 'string' ||
     typeof personalInfo.email !== 'string' ||
     typeof personalInfo.phone !== 'string'
   ) {
@@ -29,19 +36,19 @@ const isWizardState = (value: unknown): value is WizardState => {
   }
   if (
     !isRecord(familyFinancialInfo) ||
-    typeof familyFinancialInfo.householdSize !== 'string' ||
+    typeof familyFinancialInfo.maritalStatus !== 'string' ||
+    typeof familyFinancialInfo.dependents !== 'string' ||
+    typeof familyFinancialInfo.employmentStatus !== 'string' ||
     typeof familyFinancialInfo.monthlyIncome !== 'string' ||
-    typeof familyFinancialInfo.monthlyExpenses !== 'string' ||
-    typeof familyFinancialInfo.dependents !== 'string'
+    typeof familyFinancialInfo.housingStatus !== 'string'
   ) {
     return false;
   }
   if (
     !isRecord(situationDescriptions) ||
-    typeof situationDescriptions.situation !== 'string' ||
-    typeof situationDescriptions.goals !== 'string' ||
-    (typeof situationDescriptions.notes !== 'string' &&
-      situationDescriptions.notes !== null)
+    typeof situationDescriptions.currentFinancialSituation !== 'string' ||
+    typeof situationDescriptions.employmentCircumstances !== 'string' ||
+    typeof situationDescriptions.reasonForApplying !== 'string'
   ) {
     return false;
   }

@@ -1,21 +1,29 @@
 export type PersonalInfo = {
-  firstName: string;
-  lastName: string;
-  email: string;
+  name: string;
+  nationalId: string;
+  dateOfBirth: string;
+  gender: string;
+  address: string;
+  city: string;
+  state: string;
+  country: string;
+  countryCode: string;
   phone: string;
+  email: string;
 };
 
 export type FamilyFinancialInfo = {
-  householdSize: string;
-  monthlyIncome: string;
-  monthlyExpenses: string;
+  maritalStatus: string;
   dependents: string;
+  employmentStatus: string;
+  monthlyIncome: string;
+  housingStatus: string;
 };
 
 export type SituationDescriptions = {
-  situation: string;
-  goals: string;
-  notes: string | null;
+  currentFinancialSituation: string;
+  employmentCircumstances: string;
+  reasonForApplying: string;
 };
 
 export type WizardState = {

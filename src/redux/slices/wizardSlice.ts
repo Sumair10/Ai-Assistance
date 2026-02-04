@@ -11,21 +11,29 @@ const wizardSlice = createSlice({
   initialState: {
     currentStep: 1,
     personalInfo: {
-      firstName: '',
-      lastName: '',
-      email: '',
+      name: '',
+      nationalId: '',
+      dateOfBirth: '',
+      gender: '',
+      address: '',
+      city: '',
+      state: '',
+      country: '',
+      countryCode: 'AE',
       phone: '',
+      email: '',
     },
     familyFinancialInfo: {
-      householdSize: '',
-      monthlyIncome: '',
-      monthlyExpenses: '',
+      maritalStatus: '',
       dependents: '',
+      employmentStatus: '',
+      monthlyIncome: '',
+      housingStatus: '',
     },
     situationDescriptions: {
-      situation: '',
-      goals: '',
-      notes: null,
+      currentFinancialSituation: '',
+      employmentCircumstances: '',
+      reasonForApplying: '',
     },
   } as WizardState,
   reducers: {
@@ -56,21 +64,29 @@ const wizardSlice = createSlice({
     resetWizard(state) {
       state.currentStep = 1;
       state.personalInfo = {
-        firstName: '',
-        lastName: '',
-        email: '',
+        name: '',
+        nationalId: '',
+        dateOfBirth: '',
+        gender: '',
+        address: '',
+        city: '',
+        state: '',
+        country: '',
+        countryCode: 'AE',
         phone: '',
+        email: '',
       };
       state.familyFinancialInfo = {
-        householdSize: '',
-        monthlyIncome: '',
-        monthlyExpenses: '',
+        maritalStatus: '',
         dependents: '',
+        employmentStatus: '',
+        monthlyIncome: '',
+        housingStatus: '',
       };
       state.situationDescriptions = {
-        situation: '',
-        goals: '',
-        notes: null,
+        currentFinancialSituation: '',
+        employmentCircumstances: '',
+        reasonForApplying: '',
       };
     },
   },
